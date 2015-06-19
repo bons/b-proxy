@@ -1,0 +1,12 @@
+{
+  "name": "b-proxy",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "pm2 start -n proxy server.js",
+    "stop": "pm2 stop proxy",
+  },
+  "dependencies": {
+    "http-proxy": "^1.11.1"
+  }
+}
