@@ -1,7 +1,7 @@
 # b-proxy
 
 ## Getting Started
-Create the file 'routes.json' in the root directory. This file indicates the url and the port to forward the request.
+Create the file `routes.json` in the root directory. This file indicates the url and the port to forward the request.
 If there is no match the proxy redirects to the last route, in this case "example.com"
 
 ```JSON
