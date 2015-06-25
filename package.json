@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "NODE_ENV=production pm2 start -n proxy server.js",
-    "stop": "pm2 stop proxy",
+    "stop": "pm2 stop proxy"
   },
   "dependencies": {
     "http-proxy": "^1.11.1"
