@@ -13,6 +13,17 @@ If there is no match the proxy redirects to the last route, in this case "exampl
 
 ```
 
+Create the file `config.js` in the root directory of the project
+
+```javascript
+'use strict';
+
+//Configuration file
+
+module.exports = {
+  port: 8080, //This overrides process.env.PORT
+};
+```
 ## License
 Copyright (c) 2015 BONS  
 Licensed under the MIT license.
