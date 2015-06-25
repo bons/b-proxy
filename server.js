@@ -1,6 +1,7 @@
 var httpProxy = require('http-proxy'),
 	http = require('http'),
-	port = process.env.PORT || 3000,
+	config = require('./config.js');
+	port = config.port || process.env.PORT || 3000,
 	routesSetup = require("./routes.json")
 ;
 
