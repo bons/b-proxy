@@ -21,7 +21,7 @@ Create the file `config.js` in the root directory of the project
 //Configuration file
 
 module.exports = {
-  port: 8080, //This overrides process.env.PORT
+  port: 8080 //This overrides process.env.PORT
 };
 ```
 ## License
