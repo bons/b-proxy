@@ -9,16 +9,18 @@ var proxy = httpProxy.createProxyServer();
 
 http.createServer(function(req, res)
 {
-	var matched = false;
+	var matched = false,
+			reg,
+			routes;
 
 	proxy.on('error', function(e)
 	{
 	  console.log(e);
 	});
 
-	for(var routes in routesSetup)
+	for(routes in routesSetup)
 	{
-		var reg = new RegExp("^"+routes.replace("*.",".*"));
+		reg = new RegExp("^"+routes.replace("*.",".*"));
 
 		if(req.headers.host && reg.test(req.headers.host.replace(":" + port, "")))
 		{
