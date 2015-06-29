@@ -7,16 +7,17 @@ var httpProxy = require('http-proxy'),
 
 var proxy = httpProxy.createProxyServer();
 
+
+proxy.on('error', function(e)
+{
+	console.log(e);
+});
+
 http.createServer(function(req, res)
 {
 	var matched = false,
 			reg,
 			routes;
-
-	proxy.on('error', function(e)
-	{
-	  console.log(e);
-	});
 
 	for(routes in routesSetup)
 	{
