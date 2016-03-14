@@ -19,6 +19,12 @@ http.createServer(function(req, res)
 			reg,
 			routes;
 
+  if(req.headers['user-agent'] && req.headers['user-agent'].match(/ELB-HealthChecker/))
+  {
+          res.writeHead(200, {'Content-Type': 'text/plain'});
+          return res.end('you shall not pass!!');
+  }
+
 	for(routes in routesSetup)
 	{
 		reg = new RegExp("^"+routes.replace("*.",".*"));
